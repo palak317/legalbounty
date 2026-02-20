@@ -5,7 +5,7 @@ from PyPDF2 import PdfReader
 # --- 1. API SETUP ---
 # For local testing, you can paste your key here.
 # For hosting, use st.secrets["GOOGLE_API_KEY"]
-GOOGLE_API_KEY = "AIzaSyB2MpGecP0ERlO8y_dhEE4VVwAVurM4qM0"
+
 genai.configure(api_key=GOOGLE_API_KEY)
 
 st.set_page_config(page_title="Legal Ease Bot", layout="centered")
@@ -52,4 +52,5 @@ if uploaded_file is not None:
 
             # 3. Display Result
             st.subheader("Legal Explanation:")
+
             st.write(summary)
